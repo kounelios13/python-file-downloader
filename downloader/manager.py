@@ -25,8 +25,23 @@ class FileManager():
         :return: size Size in bytes
         """
         # Perform a HEAD request to get only the head of the request
+
+        header_name = 'Content-Length'
+        size = int(self.__get_header__(url, header_name))
+        return size
+
+    def get_file_type(self, url):
+        """
+        Get content type from a url
+        :param url: The url we want to ask its content type
+        :return: type The content type
+        """
+        header_name = "Content-Type"
+        type = self.__get_header__(header_name)
+        return type
+
+    def __get_header__(self, url, name):
         response = requests.head(url)
         headers = response.headers
-        header_name = 'Content-Length'
-        size = int(headers.get(header_name))
-        return size
+        header = headers.get(name)
+        return header
