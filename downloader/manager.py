@@ -37,7 +37,7 @@ class FileManager():
         :return: type The content type
         """
         header_name = "Content-Type"
-        type = self.__get_header__(header_name)
+        type = self.__get_header__(url,header_name)
         return type
 
     def __get_header__(self, url, name):
