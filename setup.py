@@ -23,7 +23,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
     ],
-    packages=find_packages(),
+    packages=["downloader"],
     include_package_data=True,
     entry_points={
         "console_scripts": [
