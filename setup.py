@@ -8,7 +8,7 @@ README = (HERE / "README.md").read_text()
 setup(
     name="simple-p-file-downloader",
 
-    version="1.0.0",
+    version="2.0.0",
     description="Simple File downloader",
     long_description=README,
     long_description_content_type="text/markdown",
